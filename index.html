@@ -7003,9 +7003,22 @@
                 anticipatePin: 1,
                 onEnter: () => {
                   playSlideEntrance(currentSlideIndex);
+                  // Auto-trigger slash animation for current character
+                  const charName = slides[currentSlideIndex]?.dataset.character;
+                  let slashStyle = "sun";
+                  if (charName === "nezuko") slashStyle = "bloom";
+                  else if (charName === "zenitsu") slashStyle = "thunder";
+                  else if (charName === "inosuke") slashStyle = "beast";
+                  if (slashAnimator) slashAnimator.trigger(slashStyle);
                 },
                 onEnterBack: () => {
                   playSlideEntrance(currentSlideIndex);
+                  const charName = slides[currentSlideIndex]?.dataset.character;
+                  let slashStyle = "sun";
+                  if (charName === "nezuko") slashStyle = "bloom";
+                  else if (charName === "zenitsu") slashStyle = "thunder";
+                  else if (charName === "inosuke") slashStyle = "beast";
+                  if (slashAnimator) slashAnimator.trigger(slashStyle);
                 },
                 onUpdate: (self) => {
                   const p = self.progress;
@@ -7922,9 +7935,40 @@
                 anticipatePin: 1,
                 onEnter: () => {
                   playHashiraSlideEntrance(currentHashiraIndex);
+                  // Auto-trigger slash for current Hashira
+                  const charName = hashiraSlides[currentHashiraIndex]?.dataset.character;
+                  let slashStyle = "water";
+                  if (charName === "rengoku") slashStyle = "flame";
+                  else if (charName === "tengen") slashStyle = "sound";
+                  else if (charName === "shinobu") slashStyle = "insect";
+                  else if (charName === "muichiro") slashStyle = "mist";
+                  else if (charName === "mitsuri") slashStyle = "love";
+                  else if (charName === "gyomei") slashStyle = "stone";
+                  else if (charName === "obanai") slashStyle = "serpent";
+                  else if (charName === "sanemi") slashStyle = "wind";
+                  else if (charName === "akaza") slashStyle = "compass";
+                  else if (charName === "kokushibo") slashStyle = "moon";
+                  else if (charName === "douma") slashStyle = "ice";
+                  else if (charName === "muzan") slashStyle = "muzan";
+                  if (hashiraSlashAnimator) hashiraSlashAnimator.trigger(slashStyle);
                 },
                 onEnterBack: () => {
                   playHashiraSlideEntrance(currentHashiraIndex);
+                  const charName = hashiraSlides[currentHashiraIndex]?.dataset.character;
+                  let slashStyle = "water";
+                  if (charName === "rengoku") slashStyle = "flame";
+                  else if (charName === "tengen") slashStyle = "sound";
+                  else if (charName === "shinobu") slashStyle = "insect";
+                  else if (charName === "muichiro") slashStyle = "mist";
+                  else if (charName === "mitsuri") slashStyle = "love";
+                  else if (charName === "gyomei") slashStyle = "stone";
+                  else if (charName === "obanai") slashStyle = "serpent";
+                  else if (charName === "sanemi") slashStyle = "wind";
+                  else if (charName === "akaza") slashStyle = "compass";
+                  else if (charName === "kokushibo") slashStyle = "moon";
+                  else if (charName === "douma") slashStyle = "ice";
+                  else if (charName === "muzan") slashStyle = "muzan";
+                  if (hashiraSlashAnimator) hashiraSlashAnimator.trigger(slashStyle);
                 },
                 onUpdate: (self) => {
                   const p = self.progress;
